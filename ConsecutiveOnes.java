@@ -1,4 +1,4 @@
-class ConsecutiveOnes  {
+class ConsecutiveOnes {
     public int findMaxConsecutiveOnes(int[] nums) {
         int maxCount = 0; // Maximum count of consecutive 1s
         int currentCount = 0; // Current streak of consecutive 1s
