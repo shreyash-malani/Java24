@@ -12,7 +12,8 @@ class FibonnaciSeriesUsingRecurssion {
         int a = 0, b = 1;
 
         // Iteratively calculate Fibonacci numbers from 2 to n
-        for (int i = 2; i <= n; i++) {
+        for (int i = 2; i <= n; i++) 
+        {
             int next = a + b;
             a = b;
             b = next;
@@ -20,7 +21,8 @@ class FibonnaciSeriesUsingRecurssion {
         return b;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
         
         // Test examples
         System.out.println(fib(2)); // Output: 1
