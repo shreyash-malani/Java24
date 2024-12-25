@@ -1,7 +1,9 @@
 import java.util.Arrays;
 
-public class FrequencyCount {
-    public static int[] frequencyCount(int[] arr, int n) {
+public class FrequencyCount 
+{
+    public static int[] frequencyCount(int[] arr, int n) 
+    {
         // Step 1: Adjust array values to ensure all elements are in the range [1, n]
         for (int i = 0; i < n; i++) {
             arr[i]--; // Convert 1-based to 0-based for easier indexing
