@@ -40,10 +40,7 @@ public class Union
         }
         ArrayList<Integer> res =findUnion(a, b);
         System.out.println("The union of the arrays is:");
-        for (int c=0;c<res.size();c++) 
-        {
-            System.out.print(res.get(c) + " ");
-        }
+        System.out.print(res);
 
         // Alternate way for "for loop"
         // for (int val : result) 
