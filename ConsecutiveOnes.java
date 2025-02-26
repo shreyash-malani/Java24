@@ -1,35 +1,32 @@
 class ConsecutiveOnes {
-    public static int findMaxConsecutiveOnes(int[] nums) 
-    {
-        int maxcount=0;
-        int currentcount=0;
-        for(int num:nums)
-        {
-            if(num==1)
-            {
-                currentcount++;
-            }
-            else
-            {
-                maxcount=Math.max(maxcount,currentcount);
-                currentcount=0;
+    public int findMaxConsecutiveOnes(int[] nums) {
+        int maxCount = 0; // Maximum count of consecutive 1s
+        int currentCount = 0; // Current streak of consecutive 1s
+
+        for (int num : nums) {
+            if (num == 1) {
+                currentCount++; // Increment current streak
+            } else {
+                maxCount = Math.max(maxCount, currentCount); // Update maxCount if needed
+                currentCount = 0; // Reset current streak
             }
         }
-        maxcount=Math.max(currentcount,maxcount);
 
-        return maxcount;        
+        // Update maxCount for the last streak of 1s
+        maxCount = Math.max(maxCount, currentCount);
+
+        return maxCount;
     }
-    public static void main(String[] args) {
-        Solution solution = new Solution();
-        
-        // Example test cases
-        int[] nums1 = {1, 1, 0, 1, 1, 1};
-        int[] nums2 = {1, 0, 1, 1, 0, 1};
-        int[] nums3 = {0, 0, 0, 1, 1, 1, 1, 0, 1, 1};
 
-        // Printing results
-        System.out.println("Max consecutive ones in nums1: " + findMaxConsecutiveOnes(nums1)); // Output: 3
-        System.out.println("Max consecutive ones in nums2: " + findMaxConsecutiveOnes(nums2)); // Output: 2
-        System.out.println("Max consecutive ones in nums3: " + findMaxConsecutiveOnes(nums3)); // Output: 4
+    public static void main(String[] args) {
+        ConsecutiveOnes solution = new ConsecutiveOnes();
+
+        // Test Case 1
+        int[] nums1 = {1, 1, 0, 1, 1, 1};
+        System.out.println("Output: " + solution.findMaxConsecutiveOnes(nums1)); // Output: 3
+
+        // Test Case 2
+        int[] nums2 = {1, 0, 1, 1, 0, 1};
+        System.out.println("Output: " + solution.findMaxConsecutiveOnes(nums2)); // Output: 2
     }
 }
