@@ -16,7 +16,7 @@ public class Pattern10
         }   
         for(int i=1;i<=n-1;i++)
         {
-            for(int j=1;j<=n-i;j++)
+            for(int j=n;j>i;j--)
             {
                 System.out.print("*");
             }
